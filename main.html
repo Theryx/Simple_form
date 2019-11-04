@@ -4,26 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="main.js"></script>
     <title>simple form</title>
 </head>
 <body>
     <h3>FILL IN THE FORM</h3>
 	<form>
         <fieldset>
-            <legend>Personal Information:</legend>
-            <label for='name'>Name</label>
-  <input type='text' id = 'name' name = 'name' value = 'Theryx'><br/>
-            <label>Email: <input type='email' name = 'email' placeholder="learningcode@code.cm"></label><br/>
-            <label for='birth'>Birth</label>
-            <input type='date' id = 'birth' name = 'birth' value = 'birth'><br/>
-            <label> Address <input type="address" name="location " placeholder="Adress here"></label>
-            <br/>
-            
-            code postal Alpha<input type="text" name="codepost" pattern="[0-9]"{3} required>
-            <br/>
-            code postal num<input type="number" name="codepostN" min="0000" max="9999"required>
-            <br/>
-            <input type = 'submit' value = "Click Here">
+            <label>Preferred email address:
+                <input type="email" id="email_addr" name="email1" value = "me@me.com" required></label>
+      
+            <label>Repeat email address:
+                <input type="email" id="email_repeat" name="email2" required onchange="check()"></label>
+      
+        <input type = 'submit' value = "Confirm Emails!" onclick="return check();">
         </fieldset>
 </form> 
 </body>
